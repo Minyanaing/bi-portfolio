@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BI Analyst Portfolio</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://esm.sh/@google/genai@^1.7.0"
+  }
+}
+</script>
+</head>
+<body>
+
+    <header class="main-header">
+        <nav class="main-nav">
+            <a href="#home" class="nav-logo">BI Analyst & Developer</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#certification">Certifications</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger-button" aria-label="Toggle navigation menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero-section">
+            <div class="hero-content">
+                <img src="assets/images/Profile YN 3.jpg" 
+                  alt="Profile Picture of Jane Doe" class="profile-picture">
+                <div class="hero-text">
+                    <h1>Min Yan Naing</h1>
+                    <p class="subtitle">Turning Data into Decisions</p>
+                    <p class="summary">
+                        A BI & Data Analyst specializing in Power BI, Microsoft Fabric and SQL to uncover insights that drive business growth. I transform complex data into clear narratives and actionable strategies.
+                    </p>
+                    <a href="#projects" class="cta-button"> <i class="fa-solid fa-chart-simple fa-bounce fa-lg"></i> View My Work</a>
+                    <a href="assets/pdf/resume.pdf"  target="_blank" class="cta-button"> <i class="fa-solid fa-file fa-bounce fa-lg"></i> View My Resume</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experiences -->
+        <section id="experience" class="content-section">
+            <div class="container">
+                <h2>Work Experience & Background</h2>
+                <div class="timeline">
+                    <!--
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="experience-header">
+                                <img src="https://www.consensys.world/images/m-consensys-logo-white.svg" alt="ConsensysAI. Logo" class="company-logo2">
+                                <div class="experience-title-group">
+                                    <h3>Power BI Lead</h3>
+                                    <p class="timeline-meta">
+                                        <a href="https://consensys.world/" target="_blank" rel="noopener noreferrer">Consensys AI <i class="fas fa-external-link-alt fa-xs"></i></a><br>Jan 2025 - Jun 2025
+                                    </p>
+                                </div>
+                            </div>
+                            <ul>
+                                <li>Led the development of enterprise-level Power BI dashboards, improving data accessibility for executives.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    -->
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="experience-header">
+                                <img src="https://miro.medium.com/v2/resize:fit:2400/1*JY2EnJo8HHy8m56de6ViIQ.png" alt="Proximity Designs. Logo" class="company-logo">
+                                <div class="experience-title-group">
+                                    <h3>Business Intelligence Analyst</h3>
+                                    <p class="timeline-meta">
+                                        <a href="https://proximitydesigns.org/" target="_blank" rel="noopener noreferrer">Proximity Designs <i class="fas fa-external-link-alt fa-xs"></i></a><br>Aug 2022 - Aug 2024
+                                    </p>
+                                </div>
+                            </div>
+                            <ul>
+                                <li>Extract and clean data from various sources by transforming raw data to insightful reports and dashboards.</li>
+                                <li>Collaborated with cross-functional teams to understand data needs and provided data-driven solutions.</li>
+                                <li>Developed and managed data warehouses to create a single source of truth data for the organization.</li>
+                                <li>Ensured data accessibility, accuracy, integrity, and consistency across all datasets.</li>
+                                <li>Negotiated with teams to enhance data capture accuracy, ensuring the integrity of data-driven insights.</li>
+                                <li>Monitored ETL pipelines and dashboards for performance, identifying and troubleshooting issues to ensure seamless data flow.</li>
+                                <li>Identified operational and process enhancement opportunities by leveraging data insights, driving continuous improvement initiatives.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="experience-header">
+                                <img src="https://www.joimyanmar.com/assets/images/employerLogo/621de1a4932751646125476.png" alt="ONOW Myanmar Logo" class="company-logo">
+                                <div class="experience-title-group">
+                                    <h3>Data Analyst</h3>
+                                    <p class="timeline-meta">
+                                        <a href="https://www.onow.com/" target="_blank" rel="noopener noreferrer">ONOW Myanmar <i class="fas fa-external-link-alt fa-xs"></i></a><br>Sep 2021 - Aug 2022
+                                    </p>
+                                </div>
+                            </div>
+                            <ul>
+                                <li>Translated business requirements into technical specifications for new reports.</li>
+                                <li>Created insightful dashboards and performed Ad-hoc Analysis.</li>
+                                <li>Ensuring data cleaning and transformation to improve data quality.</li>
+                                <li>Defined data formats and types for developers to reduce data inconsistencies and analyzed data with reports to enhance workflow efficiency.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+        <!-- Certificates -->
+        <section id="certification" class="content-section">
+            <div class="container">
+                <h2>Certifications</h2>
+                <div class="card-grid">
+                     <div class="card skill-card">
+                        <a href="https://learn.microsoft.com/en-us/users/yanain9/credentials/a4461dd19d89ad0a" target="_blank"> <i class="fa-solid fa-certificate fa-lg"></i> Microsoft Certified: Power BI Data Analyst Associate <i class="fas fa-external-link-alt fa-xs"></i> </a>
+                        <br>
+                        <a href="https://learn.microsoft.com/en-us/users/yanain9/credentials/7c6e855409d40526" target="_blank"> <i class="fa-solid fa-certificate fa-lg"></i> Microsoft Certified: Fabric Analytics Engineer Associate <i class="fas fa-external-link-alt fa-xs"></i> </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section id="projects" class="content-section">
+            <div class="container">
+                <h2>Projects</h2>
+                <div class="card-grid">
+                    <div class="card">
+                        <img src="https://via.placeholder.com/400x225.png/00f5d4/1a1a1a?text=Sales+Dashboard" alt="Sales Dashboard Thumbnail">
+                        <div class="card-content">
+                            <h3>Executive Sales Dashboard</h3>
+                            <p>An interactive Power BI report providing a real-time overview of sales performance, regional breakdowns, and product-level profitability.</p>
+                            <div class="card-footer">
+                                <a href="#" class="card-link disabled" aria-disabled="true">View Interactive Report</a>
+                                <a href="#" class="card-link"><i class="fab fa-github"></i> GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="https://via.placeholder.com/400x225.png/f72585/1a1a1a?text=HR+Analytics" alt="HR Analytics Thumbnail">
+                        <div class="card-content">
+                            <h3>HR Attrition Analysis</h3>
+                            <p>A deep-dive analysis and predictive model in Python to identify key factors contributing to employee turnover, presented in a Power BI storyboard.</p>
+                            <div class="card-footer">
+                                <a href="#" class="card-link">View Case Study</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="https://via.placeholder.com/400x225.png/7209b7/1a1a1a?text=Supply+Chain" alt="Supply Chain Thumbnail">
+                        <div class="card-content">
+                            <h3>Supply Chain Optimization</h3>
+                            <p>Professional project to analyze and visualize supply chain logistics, identifying bottlenecks and saving the company an estimated $200k annually.</p>
+                             <div class="card-footer">
+                                <a href="#" class="card-link disabled" aria-disabled="true">Confidential Project</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="content-section">
+            <div class="container">
+                <h2>Skills</h2>
+                <div class="card-grid">
+                    <div class="card skill-card">
+                        <i class="fas fa-chart-bar skill-icon"></i>
+                        <h3>BI & Visualization</h3>
+                        <p>Power BI, Tableau, DAX, M Query, Data Storytelling</p>
+                    </div>
+                    <div class="card skill-card">
+                        <i class="fas fa-database skill-icon"></i>
+                        <h3>Data & Databases</h3>
+                        <p>SQL, T-SQL, PostgreSQL, SSIS, Azure SQL, Data Modeling</p>
+                    </div>
+                    <div class="card skill-card">
+                        <i class="fab fa-python skill-icon"></i>
+                        <h3>Programming</h3>
+                        <p>Python (Pandas, Scikit-learn), R, PowerShell</p>
+                    </div>
+                    <!-- 
+                    <div class="card skill-card">
+                        <i class="fas fa-certificate skill-icon"></i>
+                        <h3>Certifications</h3>
+                        <a href="https://learn.microsoft.com/en-us/users/yanain9/credentials/a4461dd19d89ad0a" target="_blank"> Microsoft Certified: Power BI Data Analyst Associate <i class="fas fa-external-link-alt fa-xs"></i> </a>
+                        <br>
+                        <a href="https://learn.microsoft.com/en-us/users/yanain9/credentials/7c6e855409d40526" target="_blank"> Microsoft Certified: Fabric Analytics Engineer Associate <i class="fas fa-external-link-alt fa-xs"></i> </a>
+                    </div> 
+                    -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2024 Min Yan Naing | BI Analyst, Data Analyst, BI Developer </p>
+            <div class="social-links">
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <!-- <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a> -->
+                <a href="mailto:yanaing.ec.1997@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const hamburgerButton = document.getElementById('hamburger-button');
+        const navLinks = document.querySelector('.nav-links');
+        const header = document.querySelector('.main-header');
+
+        // Toggle mobile navigation
+        hamburgerButton.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburgerButton.querySelector('i').classList.toggle('fa-bars');
+            hamburgerButton.querySelector('i').classList.toggle('fa-times');
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+                // Close mobile menu on link click
+                if (navLinks.classList.contains('active')) {
+                    navLinks.classList.remove('active');
+                    hamburgerButton.querySelector('i').classList.add('fa-bars');
+                    hamburgerButton.querySelector('i').classList.remove('fa-times');
+                }
+            });
+        });
+
+        // Add background to header on scroll
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    });
+</script>
+</body>
+</html>
