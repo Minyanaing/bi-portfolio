@@ -48,8 +48,8 @@
                         Data Professional with expertise across Snowflake, Microsoft Fabric and AWS. I bridge the gap between complex data engineering and strategic BI, using SQL and Power BI to uncover insights and build the robust infrastructures that power them.
                     </p>
                     <a href="#projects" class="cta-button"> <i class="fa-solid fa-chart-simple fa-bounce fa-lg"></i> &nbsp; View My Work </a>
-                    <!-- <a href="assets/pdf/resume.pdf"  target="_blank" class="cta-button"> <i class="fa-solid fa-file fa-bounce fa-lg"></i> View My Resume</a> -->
                     <a href="tel:+855962209156" class="cta-button"> <i class="fa-brands fa-whatsapp fa-bounce fa-lg"></i> &nbsp; +855 962209156 </a>
+                    <button id="qr-code-btn" class="cta-button"> <i class="fa-solid fa-qrcode fa-bounce fa-lg"></i> &nbsp; Line ID </button>
                 </div>
             </div>
         </section>
@@ -284,6 +284,15 @@
         </div>
     </div>
 
+    <!-- QR Code Modal -->
+    <div id="qr-modal" class="modal-overlay">
+        <div class="modal-content qr-modal-content">
+            <button id="qr-modal-close-btn" class="modal-close-btn" aria-label="Close QR code view">&times;</button>
+            <img src="./assets/images/line_id.png" alt="Line ID QR Code" id="qr-image">
+        </div>
+    </div>
+
+
 <script>
     document.addEventListener('DOMContentLoaded', () => {
         const hamburgerButton = document.getElementById('hamburger-button');
@@ -327,42 +336,69 @@
         });
 
         // Power BI Modal Logic
-        const modal = document.getElementById('pbi-modal');
-        const iframe = document.getElementById('pbi-iframe');
-        const closeBtn = document.getElementById('modal-close-btn');
-        const viewReportBtns = document.querySelectorAll('.view-report-btn');
+        const pbiModal = document.getElementById('pbi-modal');
+        const pbiIframe = document.getElementById('pbi-iframe');
+        const pbiCloseBtn = document.getElementById('modal-close-btn');
+        const pbiViewReportBtns = document.querySelectorAll('.view-report-btn');
 
-        const openModal = (url) => {
-            iframe.src = url;
-            modal.classList.add('active');
+        const openPbiModal = (url) => {
+            pbiIframe.src = url;
+            pbiModal.classList.add('active');
         };
 
-        const closeModal = () => {
-            modal.classList.remove('active');
-            iframe.src = ''; // Stop the report from running in the background
+        const closePbiModal = () => {
+            pbiModal.classList.remove('active');
+            pbiIframe.src = ''; // Stop the report from running in the background
         };
 
-        viewReportBtns.forEach(btn => {
+        pbiViewReportBtns.forEach(btn => {
             btn.addEventListener('click', () => {
                 const embedUrl = btn.dataset.embedUrl;
                 if (embedUrl) {
-                    openModal(embedUrl);
+                    openPbiModal(embedUrl);
                 }
             });
         });
 
-        closeBtn.addEventListener('click', closeModal);
+        pbiCloseBtn.addEventListener('click', closePbiModal);
         
-        modal.addEventListener('click', (e) => {
-            // Close modal if the overlay is clicked, but not the content inside
-            if (e.target === modal) {
-                closeModal();
+        pbiModal.addEventListener('click', (e) => {
+            if (e.target === pbiModal) {
+                closePbiModal();
             }
         });
+
+        // QR Code Modal Logic
+        const qrModal = document.getElementById('qr-modal');
+        const qrBtn = document.getElementById('qr-code-btn');
+        const qrCloseBtn = document.getElementById('qr-modal-close-btn');
+
+        const openQrModal = () => {
+            qrModal.classList.add('active');
+        };
+
+        const closeQrModal = () => {
+            qrModal.classList.remove('active');
+        };
+
+        qrBtn.addEventListener('click', openQrModal);
+        qrCloseBtn.addEventListener('click', closeQrModal);
         
+        qrModal.addEventListener('click', (e) => {
+            if (e.target === qrModal) {
+                closeQrModal();
+            }
+        });
+
+        // General Modal Logic (Escape key)
         document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && modal.classList.contains('active')) {
-                closeModal();
+            if (e.key === 'Escape') {
+                if (pbiModal.classList.contains('active')) {
+                    closePbiModal();
+                }
+                if (qrModal.classList.contains('active')) {
+                    closeQrModal();
+                }
             }
         });
     });
