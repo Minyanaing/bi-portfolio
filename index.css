@@ -239,14 +239,14 @@ a:hover {
     background-color: var(--border-color);
     top: 0;
     bottom: 0;
-    left: 50%;
+    left: 30px;
     margin-left: -1.5px;
 }
 
 .timeline-item {
-    padding: 1rem 3rem;
+    padding: 1rem 1rem 1rem 70px;
     position: relative;
-    width: 50%;
+    width: 100%;
 }
 
 .timeline-item:nth-child(odd) {
@@ -254,7 +254,7 @@ a:hover {
 }
 
 .timeline-item:nth-child(even) {
-    left: 50%;
+    left: 0;
 }
 
 .timeline-item::after {
@@ -266,14 +266,16 @@ a:hover {
     border: 3px solid var(--primary-accent);
     border-radius: 50%;
     top: 25px;
+    left: 20px;
     z-index: 1;
 }
 .timeline-item:nth-child(odd)::after {
-    right: -13.5px;
+    left: 20px;
+    right: auto;
 }
 
 .timeline-item:nth-child(even)::after {
-    left: -13.5px;
+    left: 20px;
 }
 
 .timeline-content {
@@ -692,10 +694,7 @@ a:hover {
         z-index: 1001; /* Ensure it's above the nav menu */
     }
 
-    .timeline::after { left: 30px; }
-    .timeline-item { width: 100%; padding-left: 60px; padding-right: 15px; }
-    .timeline-item:nth-child(even) { left: 0; }
-    .timeline-item::after { left: 20px; }
+    .timeline-item { padding-left: 60px; padding-right: 15px; }
 
     .project-card {
       flex: 0 0 280px; /* Slightly smaller cards on mobile */
