@@ -1,42 +1,43 @@
+// ── GA4 Event Name Config ─────────────────────────────────────────────────────
+// Edit the VALUES (right side) to rename any GA4 event.
+// Do NOT change the KEYS (left side) — they match data-track attributes in the HTML.
+const EVENT_NAMES = {
+    // Hero
+    cta_view_my_work:               'cta_view_my_work',
+    cta_whatsapp:                   'cta_whatsapp',
+    cta_line_id:                    'cta_line_id',
+
+    // Experience
+    exp_messagespring_linkedin:     'exp_messagespring_linkedin',
+    exp_consensysai_website:        'exp_consensysai_website',
+    exp_proximitydesigns_website:   'exp_proximitydesigns_website',
+    exp_proximitydesigns_linkedin:  'exp_proximitydesigns_linkedin',
+    exp_onow_website:               'exp_onow_website',
+    exp_onow_linkedin:              'exp_onow_linkedin',
+
+    // Certifications
+    cert_powerbi:                   'cert_powerbi',
+    cert_snowprocore:               'cert_snowprocore',
+    cert_fabric_analytics:          'cert_fabric_analytics',
+    cert_fabric_data_engineer:      'cert_fabric_data_engineer',
+    cert_snowpro_associate:         'cert_snowpro_associate',
+    cert_aws_data_engineer:         'cert_aws_data_engineer',
+
+    // Projects
+    proj_northwind_trading:         'proj_northwind_trading',
+    proj_road_accident:             'proj_road_accident',
+    proj_washington_crime:          'proj_washington_crime',
+};
+// ─────────────────────────────────────────────────────────────────────────────
+
 document.addEventListener('sectionsReady', () => {
-    const track = (eventName, params) => {
-        if (typeof gtag !== 'function') return;
-        gtag('event', eventName, params);
-    };
+    if (typeof gtag !== 'function') return;
 
-    // Hero CTA buttons
-    document.querySelector('a.cta-button[href="#projects"]')
-        ?.addEventListener('click', () => track('cta_click', { button: 'view_my_work' }));
-
-    document.getElementById('whatsapp-btn')
-        ?.addEventListener('click', () => track('cta_click', { button: 'whatsapp_id' }));
-
-    document.getElementById('qr-code-btn')
-        ?.addEventListener('click', () => track('cta_click', { button: 'line_id' }));
-
-    // Company profile links in experience section
-    document.querySelectorAll('.timeline-meta a[href^="http"]').forEach(link => {
-        link.addEventListener('click', () => {
-            track('company_profile_click', {
-                company: link.textContent.trim().replace(/\s+/g, ' ')
-            });
-        });
-    });
-
-    // Certification links
-    document.querySelectorAll('#certification .skill-card a').forEach(link => {
-        link.addEventListener('click', () => {
-            track('certification_click', {
-                certification: link.textContent.trim().replace(/\s+/g, ' ')
-            });
-        });
-    });
-
-    // Project report buttons
-    document.querySelectorAll('.view-report-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-            const project = btn.closest('.card')?.querySelector('h3')?.textContent.trim();
-            track('project_report_click', { project });
+    document.querySelectorAll('[data-track]').forEach(el => {
+        el.addEventListener('click', () => {
+            const key = el.dataset.track;
+            const eventName = EVENT_NAMES[key] ?? key;
+            gtag('event', eventName);
         });
     });
 });
