@@ -177,7 +177,7 @@ a:hover {
 
 .hero-text {
     text-align: left;
-    width: 720px;
+    width: 100%;
     max-width: 720px;
     background: rgba(10, 14, 23, 0.55);
     backdrop-filter: blur(4px);
@@ -638,40 +638,13 @@ a:hover {
 /* --- RESPONSIVE DESIGN --- */
 @media (max-width: 768px) {
     h1 { font-size: 2.5rem; }
-    h2 { font-size: 2rem; }
+    h2 { font-size: 1.8rem; margin-bottom: 2rem; }
 
-    .hero-section {
-        min-height: auto;
-        padding-top: 8rem;
-        padding-bottom: 4rem;
-    }
+    .container { padding: 0 1.25rem; }
 
-    .hero-content {
-        flex-direction: column;
-        text-align: center;
-        gap: 2.5rem;
-    }
+    .content-section { padding: 3.5rem 0; }
 
-    .profile-picture {
-        width: 200px;
-        height: 200px;
-    }
-    
-    .hero-text {
-        text-align: center;
-    }
-
-    .hero-text h1 {
-        font-size: 3rem;
-    }
-    
-    .hero-text .cta-button {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        max-width: 300px;
-    }
-
+    /* Nav */
     .nav-links {
         position: fixed;
         top: 0;
@@ -683,53 +656,97 @@ a:hover {
         justify-content: center;
         align-items: center;
         transition: left 0.5s ease-in-out;
+        z-index: 1000;
     }
+    .nav-links.active { left: 0; }
+    .nav-links li { margin: 1.5rem 0; }
+    .nav-links a { font-size: 1.5rem; }
+    .hamburger { display: block; z-index: 1001; }
 
-    .nav-links.active {
-        left: 0;
+    /* Hero */
+    .hero-section {
+        min-height: auto;
+        padding-top: 7rem;
+        padding-bottom: 3rem;
     }
-
-    .nav-links li {
-        margin: 1.5rem 0;
-    }
-
-    .nav-links a {
-        font-size: 1.5rem;
-    }
-
-    .hamburger {
-        display: block;
-        z-index: 1001; /* Ensure it's above the nav menu */
-    }
-
-    .timeline-item { padding-left: 60px; padding-right: 15px; }
-
-    .project-card {
-      flex: 0 0 280px; /* Slightly smaller cards on mobile */
-    }
-
-    .skills-flex-container {
+    .hero-content {
         flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1.5rem;
+    }
+    .profile-picture {
+        width: 150px;
+        height: 150px;
+    }
+    .hero-text {
+        text-align: center;
+        padding: 1.25rem 1.25rem;
+        width: 100%;
+        max-width: 100%;
+    }
+    .hero-text h1 { font-size: 2rem; margin-bottom: 0.2rem; }
+    .hero-text .subtitle { font-size: 1rem; margin-bottom: 0.75rem; }
+    .hero-text .summary {
+        font-size: 0.875rem;
+        text-align: left;
+        margin-bottom: 1.25rem;
+    }
+    .cta-button {
+        display: block;
+        width: 100%;
+        margin: 0.4rem 0;
+        text-align: center;
     }
 
-    .modal-content {
-      width: 95%;
+    /* Timeline */
+    .timeline::after { left: 20px; }
+    .timeline-item {
+        padding: 0.75rem 0.75rem 0.75rem 50px;
     }
-    
-    #pbi-modal .modal-content {
-      height: 80%;
+    .timeline-item::after,
+    .timeline-item:nth-child(odd)::after,
+    .timeline-item:nth-child(even)::after {
+        left: 11px;
+        width: 16px;
+        height: 16px;
     }
+    .experience-header { gap: 0.75rem; }
+    .company-logo, .company-logo2 { width: 45px; height: 45px; }
+    .timeline-content { padding: 1rem; }
+    .timeline-content ul { padding-left: 0; }
 
+    /* Projects */
+    .project-card { flex: 0 0 260px; }
+
+    /* Skills */
+    .skills-flex-container { flex-direction: column; }
+
+    /* Modals */
+    .modal-content { width: 95%; }
+    #pbi-modal .modal-content { height: 80%; }
     .modal-close-btn {
-      top: 5px;
-      right: 5px;
-      font-size: 2rem;
-      color: var(--bg-color);
-      background-color: rgba(255, 255, 255, 0.7);
-      width: 30px;
-      height: 30px;
-      line-height: 30px;
-      text-align: center;
-      border-radius: 50%;
+        top: 5px;
+        right: 5px;
+        font-size: 1.75rem;
+        color: var(--bg-color);
+        background-color: rgba(255, 255, 255, 0.8);
+        width: 32px;
+        height: 32px;
+        line-height: 32px;
+        text-align: center;
+        border-radius: 50%;
     }
+}
+
+/* Very small screens */
+@media (max-width: 400px) {
+    .hero-text h1 { font-size: 1.75rem; }
+    .hero-text .subtitle { font-size: 0.9rem; }
+    .cta-button { font-size: 0.85rem; padding: 0.7rem 1rem; }
+    .timeline-item { padding-left: 42px; }
+    .timeline::after { left: 16px; }
+    .timeline-item::after,
+    .timeline-item:nth-child(odd)::after,
+    .timeline-item:nth-child(even)::after { left: 8px; }
 }
