@@ -1,6 +1,9 @@
 <section id="projects" class="content-section">
     <div class="container">
         <h2>Projects</h2>
+
+        <!-- Power BI Dashboards -->
+        <h3 class="projects-subtitle">Power BI Dashboards</h3>
         <div class="projects-scroll-container">
             <div class="card project-card">
                 <div class="card-content">
@@ -33,74 +36,30 @@
                 </div>
             </div>
         </div>
-    </div>
-</section>
 
-
-<!--  
-
-        <section id="projects" class="content-section">
-            <div class="container">
-                <h2>Projects</h2>
-                <div class="projects-scroll-container">
-                    <div class="card project-card">
-                        <div class="card-content">
-                            <h3>Northwind Trading</h3>
-                            <p>A deep-dive analysis to identify key factors contributing to employee turnover, presented in a Power BI storyboard.</p> 
-                        </div>
-                        <div class="card-footer">
-                            <button class="card-link view-report-btn" data-embed-url="https://app.powerbi.com/view?r=eyJrIjoiNTJhYjA5YTgtY2I3YS00YTA3LTg1MzQtMGQxMWI1N2E0OWEwIiwidCI6ImQ4NjdiODhlLTcwYWEtNDNmYy04N2ZhLWJkZGEwZDRhYjAxNyIsImMiOjEwfQ%3D%3D">
-                                <i class="fa-solid fa-chart-area fa-lg"></i> View Interactive Report
-                            </button>
-                        </div>
+        <!-- Data Engineering Projects -->
+        <h3 class="projects-subtitle">Data Engineering</h3>
+        <div class="projects-scroll-container">
+            <div class="card project-card de-project-card">
+                <div class="card-content">
+                    <h3>Snowflake End-to-End Data Engineering</h3>
+                    <p class="project-description">
+                        Automated daily ingestion of live cryptocurrency market data via API into Snowflake, structured using Medallion architecture (Bronze → Silver → Gold) with dimensional data modelling, and surfaced through an interactive Streamlit dashboard for market analysis.
+                    </p>
+                    <div class="project-tech-tags">
+                        <span class="tech-tag">Snowflake</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Streamlit</span>
+                        <span class="tech-tag">Medallion</span>
                     </div>
-                    <div class="card project-card">
-                        <div class="card-content">
-                            <h3>Road Accident Analysis</h3>
-                             <p>An interactive Power BI report providing a real-time overview of sales performance, regional breakdowns, and profitability.</p> 
-                        </div>
-                        <div class="card-footer">
-                             <button class="card-link view-report-btn" data-embed-url="https://app.powerbi.com/view?r=eyJrIjoiMDk3NWVjYTYtY2E0Ny00YzE2LTkwMjEtM2MxNjg0ZTNiN2RiIiwidCI6ImQ4NjdiODhlLTcwYWEtNDNmYy04N2ZhLWJkZGEwZDRhYjAxNyIsImMiOjEwfQ%3D%3D">
-                                <i class="fa-solid fa-chart-area fa-lg"></i> View Interactive Report
-                            </button>
-                        </div>
-                    </div>
-                    <div class="card project-card">
-                        <div class="card-content">
-                            <h3>Washington Crime Analysis</h3>
-                              <p>A comprehensive dashboard for tracking key retail metrics like sales, inventory turnover, and customer footfall across multiple stores.</p> 
-                        </div>
-                        <div class="card-footer">
-                             <button class="card-link view-report-btn" data-embed-url="https://app.powerbi.com/view?r=eyJrIjoiYTZkZmE5ZDQtNGViNS00ZGYwLTk5OWYtMGJlOGZiY2NiODhhIiwidCI6ImQ4NjdiODhlLTcwYWEtNDNmYy04N2ZhLWJkZGEwZDRhYjAxNyIsImMiOjEwfQ%3D%3D">
-                                <i class="fa-solid fa-chart-area fa-lg"></i> View Interactive Report
-                            </button>
-                        </div>
-                    </div>
-                     
-                    <div class="card project-card">
-                        <div class="card-content">
-                            <h3>Supply Chain Optimization</h3>
-                            <p>Analysis of logistics data to identify bottlenecks, optimize routes, and reduce transportation costs, visualized for strategic planning.</p>
-                        </div>
-                        <div class="card-footer">
-                             <button class="card-link view-report-btn" data-embed-url="https://app.powerbi.com/view?r=eyJrIjoiMWE5NjM5MDgtNmU5ZC00OTg1LWI4YjctYjFlYjE5ZThjYzVjIiwidCI6ImQ4NjdiODhlLTcwYWEtNDNmYy04N2ZhLWJkZGEwZDRhYjAxNyIsImMiOjEwfQ%3D%3D">
-                                <i class="fa-solid fa-chart-area fa-lg"></i> View Interactive Report
-                            </button>
-                        </div>
-                    </div>
-                    <div class="card project-card">
-                        <div class="card-content">
-                            <h3>Customer Sentiment Analysis</h3>
-                            <p>Dashboard aggregating customer feedback from various channels to provide insights into brand perception and product satisfaction.</p>
-                        </div>
-                        <div class="card-footer">
-                             <button class="card-link view-report-btn" data-embed-url="https://app.powerbi.com/view?r=eyJrIjoiYjI3YjM5ODUtN2MwMi00ZTIyLWEyY2YtYWFlZjU4ZDE5M2I1IiwidCI6ImQ4NjdiODhlLTcwYWEtNDNmYy04N2ZhLWJkZGEwZDRhYjAxNyIsImMiOjEwfQ%3D%3D">
-                                <i class="fa-solid fa-chart-area fa-lg"></i> View Interactive Report
-                            </button>
-                        </div>
-                    </div> 
+                </div>
+                <div class="card-footer">
+                    <a href="https://github.com/Minyanaing/coin-dwh-ml" class="card-link github-link" target="_blank" rel="noopener noreferrer" data-track="proj_snowflake_crypto_de">
+                        <i class="fab fa-github fa-lg"></i> View on GitHub
+                    </a>
                 </div>
             </div>
-        </section>
- -->
+        </div>
 
+    </div>
+</section>

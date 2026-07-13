@@ -23,10 +23,13 @@ const EVENT_NAMES = {
     cert_snowpro_associate:         'cert_snowpro_associate',
     cert_aws_data_engineer:         'cert_aws_data_engineer',
 
-    // Projects
+    // Projects — Power BI
     proj_northwind_trading:         'proj_northwind_trading',
     proj_road_accident:             'proj_road_accident',
     proj_washington_crime:          'proj_washington_crime',
+
+    // Projects — Data Engineering
+    proj_snowflake_crypto_de:       'proj_snowflake_crypto_de',
 };
 // ─────────────────────────────────────────────────────────────────────────────
 
